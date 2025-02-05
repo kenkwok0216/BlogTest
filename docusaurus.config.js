@@ -10,8 +10,8 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'Welcome to by Page',
+  tagline: 'This page is built with Docusaurus.',
   favicon: 'img/favicon.ico',
 
   url: 'https://kenkwok0216.github.io', // Your GitHub Pages URL
@@ -70,23 +70,25 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'My Site',
+        title: 'Welcome to our Tutorial',
         logo: {
           alt: 'My Site Logo',
           src: 'img/logo.svg',
         },
         items: [
           {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
+            //type: 'docSidebar',
+            sidebarId: 'DocusaurusSidebar',
             position: 'left',
-            label: 'Tutorial',
-          },
-          {to: '/blog', label: 'Blog', position: 'left'},
-          {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
-            position: 'right',
+            label: 'Docusaurus',
+			to: '/docs/Docusaurus/Intro',
+          },          
+		  {
+            //type: 'docSidebar',
+            sidebarId: 'MySQLSidebar',
+            position: 'left',
+            label: 'MySQL',
+			to: '/docs/MySQL/MySQL-Basic',
           },
         ],
       },
@@ -97,25 +99,8 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
-              },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'X',
-                href: 'https://x.com/docusaurus',
+                label: 'Docusaurus Tutorial',
+                to: '/docs/Docusaurus/Intro',
               },
             ],
           },
@@ -128,7 +113,7 @@ const config = {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/kenkwok0216',
               },
             ],
           },
