@@ -53,7 +53,7 @@ A unique key constraint ensures that all values in a column are different from o
 Indexes are used to speed up the retrieval of rows by creating a data structure that allows fast access to rows. You can create an index on a specific column to improve query performance.
 For example, if you frequently query the `employees` table by the `position` column, you can create an index on that column to improve query performance. With the index on the `position` column, queries will directly search `position` but not `id` then `name` then `position` and end the searching.
 
-## Summary
+## Conclusion
 
 - **Tables**: Organize data in rows and columns.
 - **Primary Key**: Unique identifier for records.

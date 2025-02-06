@@ -4,22 +4,26 @@ sidebar_position: 4
 
 # Creating and Modifying a Table
 
-Once you have created your database, you can proceed to use it. In this session, it is assumed that you have created a database called `sql_tutorial`, as shown in the section titled **MySQL Database: Creation, Verification, and Deletion**.
+In this section, we will explore how to create and modify a table in your MySQL database. 
+
+## Prerequisites
+
+Before you begin, ensure you have **Database Created**. You should have a database called `sql_tutorial`, as demonstrated in the section titled [**MySQL Database: Creation, Verification, and Deletion**](/docs/MySQL/Creating-Database).
 
 ## 1. Selecting the Database
 
-To make `sql_tutorial` the current database for your session using the following command:
+To make `sql_tutorial` the current database for your session, use the following command:
 
 ```sql
 USE `sql_tutorial`;
 ```
 
-- **Explanation:**
-  - This command sets the `sql_tutorial` database as the active database, allowing you to perform operations within it.
+### Explanation:
+- This command sets `sql_tutorial` as the active database, allowing you to execute commands within it.
 
 ## 2. Defining Data Types
 
-When creating a table, you need to define the data types for each column. Here are some common data types in MySQL:
+When creating a table, you must define the data types for each column. Here are some common data types in MySQL:
 
 | Data Type        | Description                          |
 |------------------|--------------------------------------|
@@ -37,7 +41,7 @@ When creating a table, you need to define the data types for each column. Here a
   - *Example*: `DECIMAL(4, 3)` can represent values like `2.177`.
 
 - **VARCHAR(n)**: A variable-length string, where `n` specifies the maximum length.
-  - *Example*: If `VARCHAR(5)`, then "car", "taxi", "train" are valid entries.
+  - *Example*: If `VARCHAR(5)`, then "car", "taxi", and "train" are valid entries.
 
 - **BLOB**: Used for storing large binary objects, such as images or audio files.
 
@@ -47,7 +51,7 @@ When creating a table, you need to define the data types for each column. Here a
 
 ## 3. Creating the `student` Table
 
-Here is an example of creating a table named `student` using the following command:
+To create a table named `student`, use the following command:
 
 ```sql
 CREATE TABLE `student` (
@@ -58,19 +62,20 @@ CREATE TABLE `student` (
 ```
 
 ### Explanation of Table Structure
-- **`student_no`**: An integer that serves as the primary key for the table.
+- **`student_no`**: An integer that serves as the primary key for the table, ensuring uniqueness.
 - **`name`**: A variable-length string for the student's name.
 - **`major`**: A variable-length string for the student's major field of study.
 
 ## 4. Verify Initial Table Structure
 
-Check if your table was structured successfully using the following command:
+To check if your table was created successfully, use the following command:
 
 ```sql
 DESCRIBE `student`;
 ```
 
-The expected output is as follows:
+### Expected Output
+You should see the following output:
 
 ```
 +------------+-------------+------+-----+---------+-------+
@@ -84,9 +89,9 @@ The expected output is as follows:
 
 ## 5. Modifying the Table Structure
 
-### 5.1 Adding the `score` Column
+### 5.1 Adding a New Column: `score`
 
-To add a new column named `score` using the following command:
+To add a new column named `score`, use the following command:
 
 ```sql
 ALTER TABLE `student` ADD `score` INT;
@@ -94,13 +99,13 @@ ALTER TABLE `student` ADD `score` INT;
 
 #### Verify Table Structure After Adding Column
 
-Check the updated structure using the following command:
+Check the updated structure using:
 
 ```sql
 DESCRIBE `student`;
 ```
 
-#### Expected Output After Adding `score`
+### Expected Output After Adding `score`
 
 ```
 +------------+-------------+------+-----+---------+-------+
@@ -115,7 +120,7 @@ DESCRIBE `student`;
 
 ### 5.2 Changing the Data Type of `score`
 
-To change the data type of the `score` column to `DECIMAL(3,2)` using the following command:
+To change the data type of the `score` column to `DECIMAL(3,2)`, use the following command:
 
 ```sql
 ALTER TABLE `student` MODIFY `score` DECIMAL(3,2);
@@ -123,13 +128,13 @@ ALTER TABLE `student` MODIFY `score` DECIMAL(3,2);
 
 #### Verify Table Structure After Changing Data Type
 
-Check the updated structure using the following command:
+Use the command:
 
 ```sql
 DESCRIBE `student`;
 ```
 
-#### Expected Output After Changing Data Type
+### Expected Output After Changing Data Type
 
 ```
 +------------+-------------+------+-----+---------+-------+
@@ -144,7 +149,7 @@ DESCRIBE `student`;
 
 ### 5.3 Dropping the `score` Column
 
-To remove the `score` column using the following command:
+To remove the `score` column, use the following command:
 
 ```sql
 ALTER TABLE `student` DROP `score`;
@@ -152,13 +157,13 @@ ALTER TABLE `student` DROP `score`;
 
 #### Verify Table Structure After Dropping Column
 
-Check the updated structure using the following command:
+Check the updated structure using:
 
 ```sql
 DESCRIBE `student`;
 ```
 
-#### Expected Output After Dropping `score`
+### Expected Output After Dropping `score`
 
 ```
 +------------+-------------+------+-----+---------+-------+
@@ -172,10 +177,23 @@ DESCRIBE `student`;
 
 ## 6. Dropping the Table
 
-If you need to delete the table `student` using the following command:
+If you need to delete the table `student`, use the following command:
 
 ```sql
 DROP TABLE `student`;
 ```
 
-- **Caution:** This action is irreversible, and all data within the table will be lost. Ensure you really want to delete `student` before running this command.
+### Caution:
+- This action is irreversible, and all data within the table will be lost. Ensure you really want to delete `student` before running this command.
+
+## Conclusion
+
+In this section, you learned the essential steps for creating and modifying tables in your MySQL database. We covered the following key points:
+
+- **Table Creation**: You successfully created a table named `student`, defining the appropriate data types for each column.
+
+- **Modifying Tables**: You explored how to add new columns, change data types, and drop columns, allowing for flexibility in managing your table structure.
+
+- **Table Deletion**: You also learned how to permanently delete a table using the `DROP TABLE` command, with a reminder about the irreversible nature of this action.
+
+With these foundational skills, you are now prepared to manage your tables effectively. In the next session, we will focus on **Inserting Data**, where you will learn how to populate your tables with meaningful information.

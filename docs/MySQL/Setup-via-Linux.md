@@ -194,3 +194,15 @@ If you encounter a "NOT FOUND" error, follow these steps:
    ```
 
 After these steps, try accessing the URL again, and you should be able to log in to the phpMyAdmin server with your password.
+
+## Conclusion
+
+In this tutorial, you learned how to install and manage MySQL Server on a Linux system. We covered the essential steps, including:
+
+- **Installation**: You successfully installed MySQL Server using the package manager.
+- **Service Management**: You learned how to check the server status, enable, disable, start, and stop the MySQL service.
+- **Security**: You enhanced the security of your MySQL installation with the `mysql_secure_installation` command and learned how to set and recover passwords.
+- **Accessing MySQL**: You accessed the MySQL server and set up root user authentication.
+- **Web Interface**: You installed phpMyAdmin for a user-friendly web interface to manage your MySQL databases.
+
+Our next session will start to indroduce some basic concept for Tables and Keys in MySQL.
