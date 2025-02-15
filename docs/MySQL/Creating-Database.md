@@ -6,7 +6,7 @@ sidebar_position: 3
 
 To create a new database in MySQL, follow these simple steps:
 
-1. **Execute the Create Database Command**
+## 1. **Execute the Create Database Command**
 
    Use the following SQL command to create a database named `sql_tutorial`:
 
@@ -18,7 +18,7 @@ To create a new database in MySQL, follow these simple steps:
      - SQL keywords (like `CREATE DATABASE`) are typically written in **uppercase** for better readability.
      - Use **backticks** (`` ` ``) around `sql_tutorial` to handle any special characters or reserved words, ensuring that MySQL interprets it correctly.
 
-2. **Verify Database Creation**
+## 2. **Verify Database Creation**
 
    After running the command, check if your database was created successfully by executing:
 
@@ -41,11 +41,11 @@ To create a new database in MySQL, follow these simple steps:
    +--------------------+
    ```
 
-3. **Locate Your Database**
+## 3. **Locate Your Database**
 
    In the output, look for `sql_tutorial`. If you see it listed, congratulations! Your database has been created successfully.
 
-4. **Dropping the Database**
+## 4. **Dropping the Database**
 
    If you need to delete the database `sql_tutorial`, you can use the following command:
 
@@ -58,7 +58,7 @@ To create a new database in MySQL, follow these simple steps:
 By following these steps, you can easily set up and manage a new database in MySQL.
 
 
-## Conclusion
+## 5. Conclusion
 
 In this tutorial, you learned the essential steps for creating, verifying, and deleting a MySQL database. We covered the following key points:
 

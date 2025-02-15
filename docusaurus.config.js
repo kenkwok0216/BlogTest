@@ -88,7 +88,7 @@ const config = {
             sidebarId: 'MySQLSidebar',
             position: 'left',
             label: 'MySQL',
-			to: '/docs/MySQL/MySQL-Basic',
+			to: '/docs/MySQL/Setup-via-Linux',
           },
         ],
       },

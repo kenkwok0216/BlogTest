@@ -6,11 +6,11 @@ sidebar_position: 4
 
 In this section, we will explore how to create and modify a table in your MySQL database. 
 
-## Prerequisites
+## 1. Prerequisites
 
 Before you begin, ensure you have **Database Created**. You should have a database called `sql_tutorial`, as demonstrated in the section titled [**MySQL Database: Creation, Verification, and Deletion**](/docs/MySQL/Creating-Database).
 
-## 1. Selecting the Database
+## 2. Selecting the Database
 
 To make `sql_tutorial` the current database for your session, use the following command:
 
@@ -18,23 +18,24 @@ To make `sql_tutorial` the current database for your session, use the following 
 USE `sql_tutorial`;
 ```
 
-### Explanation:
+### 2.1 Explanation:
 - This command sets `sql_tutorial` as the active database, allowing you to execute commands within it.
 
-## 2. Defining Data Types
+## 3. Defining Data Types
 
 When creating a table, you must define the data types for each column. Here are some common data types in MySQL:
 
 | Data Type        | Description                          |
 |------------------|--------------------------------------|
-| `INT`            | Integer                               |
-| `DECIMAL(m, n)`  | Decimal with precision                |
-| `VARCHAR(n)`     | Variable-length string                |
-| `BLOB`           | Binary Large Object                   |
-| `DATE`           | Date                                  |
-| `TIMESTAMP`      | Timestamp                             |
+| `INT`            | Integer                              |
+| `DECIMAL(m, n)`  | Decimal with precision               |
+| `VARCHAR(n)`     | Variable-length string               |
+| `BLOB`           | Binary Large Object                  |
+| `DATE`           | Date                                 |
+| `TIMESTAMP`      | Timestamp                            |
 
-### Explanation of Data Types
+### 3.1 Explanation of Data Types
+
 - **INT**: Used for integers.
   
 - **DECIMAL(m, n)**: Used for numbers with a fixed number of decimal points, where `m` is the total number of digits and `n` is the number of digits after the decimal point. 
@@ -49,7 +50,7 @@ When creating a table, you must define the data types for each column. Here are 
 
 - **TIMESTAMP**: Stores date and time values in the format 'YYYY-MM-DD HH:MM:SS'.
 
-## 3. Creating the `student` Table
+## 4. Creating the `student` Table
 
 To create a table named `student`, use the following command:
 
@@ -61,12 +62,12 @@ CREATE TABLE `student` (
 );
 ```
 
-### Explanation of Table Structure
+### 4.1 Explanation of Table Structure
 - **`student_no`**: An integer that serves as the primary key for the table, ensuring uniqueness.
 - **`name`**: A variable-length string for the student's name.
 - **`major`**: A variable-length string for the student's major field of study.
 
-## 4. Verify Initial Table Structure
+## 5. Verify Initial Table Structure
 
 To check if your table was created successfully, use the following command:
 
@@ -74,7 +75,7 @@ To check if your table was created successfully, use the following command:
 DESCRIBE `student`;
 ```
 
-### Expected Output
+### 4.2 Expected Output
 You should see the following output:
 
 ```
@@ -97,7 +98,7 @@ To add a new column named `score`, use the following command:
 ALTER TABLE `student` ADD `score` INT;
 ```
 
-#### Verify Table Structure After Adding Column
+#### 5.1.1 Verify Table Structure After Adding Column
 
 Check the updated structure using:
 
@@ -105,7 +106,7 @@ Check the updated structure using:
 DESCRIBE `student`;
 ```
 
-### Expected Output After Adding `score`
+### 5.2 Expected Output After Adding `score`
 
 ```
 +------------+-------------+------+-----+---------+-------+
@@ -118,7 +119,7 @@ DESCRIBE `student`;
 +------------+-------------+------+-----+---------+-------+
 ```
 
-### 5.2 Changing the Data Type of `score`
+### 5.3 Changing the Data Type of `score`
 
 To change the data type of the `score` column to `DECIMAL(3,2)`, use the following command:
 
@@ -126,7 +127,7 @@ To change the data type of the `score` column to `DECIMAL(3,2)`, use the followi
 ALTER TABLE `student` MODIFY `score` DECIMAL(3,2);
 ```
 
-#### Verify Table Structure After Changing Data Type
+#### 5.3.1 Verify Table Structure After Changing Data Type
 
 Use the command:
 
@@ -134,7 +135,7 @@ Use the command:
 DESCRIBE `student`;
 ```
 
-### Expected Output After Changing Data Type
+### 5.4 Expected Output After Changing Data Type
 
 ```
 +------------+-------------+------+-----+---------+-------+
@@ -147,7 +148,7 @@ DESCRIBE `student`;
 +------------+-------------+------+-----+---------+-------+
 ```
 
-### 5.3 Dropping the `score` Column
+### 5.5 Dropping the `score` Column
 
 To remove the `score` column, use the following command:
 
@@ -155,7 +156,7 @@ To remove the `score` column, use the following command:
 ALTER TABLE `student` DROP `score`;
 ```
 
-#### Verify Table Structure After Dropping Column
+#### 5.5.1 Verify Table Structure After Dropping Column
 
 Check the updated structure using:
 
@@ -163,7 +164,7 @@ Check the updated structure using:
 DESCRIBE `student`;
 ```
 
-### Expected Output After Dropping `score`
+### 5.6 Expected Output After Dropping `score`
 
 ```
 +------------+-------------+------+-----+---------+-------+
@@ -183,10 +184,9 @@ If you need to delete the table `student`, use the following command:
 DROP TABLE `student`;
 ```
 
-### Caution:
-- This action is irreversible, and all data within the table will be lost. Ensure you really want to delete `student` before running this command.
+**Caution:** This action is irreversible, and all data within the table will be lost. Ensure you really want to delete `student` before running this command.
 
-## Conclusion
+## 7. Conclusion
 
 In this section, you learned the essential steps for creating and modifying tables in your MySQL database. We covered the following key points:
 

@@ -2,15 +2,15 @@
 sidebar_position: 6
 ---
 
-## Constraints
+# Constraints
 
 In this session, we will introduce the concept of **constraints** in SQL. Constraints are rules that enforce specific conditions on the data in your tables, ensuring data integrity and accuracy.
 
-### Prerequisites
+## 1. Prerequisites
 
 Before we begin, please ensure that you have created a database called `sql_tutorial`. If you already have a `student` table, you will need to remove it before proceeding.
 
-### Removing the Existing Table
+### 1.1 Removing the Existing Table
 
 To remove the existing `student` table, you can execute the following command:
 
@@ -18,7 +18,7 @@ To remove the existing `student` table, you can execute the following command:
 DROP TABLE `student`;
 ```
 
-### Creating the Student Table with Constraints
+### 1.2 Creating the Student Table with Constraints
 
 After removing the old table, run the following code to create a new `student` table with constraints:
 
@@ -32,7 +32,7 @@ CREATE TABLE `student` (
 );
 ```
 
-### Explanation of Constraints
+### 1.3 Explanation of Constraints
 
 - **AUTO_INCREMENT**: The `student_no` field will automatically increment with each new record, ensuring unique values.
 - **NOT NULL**: The `name` and `major` fields cannot be NULL, meaning every record must have valid values.
@@ -40,11 +40,11 @@ CREATE TABLE `student` (
 - **DEFAULT**: The `religion` field will default to "No religion" if no value is provided during insertion.
 - **PRIMARY KEY**: The `student_no` field serves as the primary key, uniquely identifying each record in the table.
 
-### Inserting Records
+## 2. Inserting Records
 
 Now that we have created the `student` table, let's insert some records to see how constraints work in practice.
 
-#### Example 1: Inserting Valid Records
+### 2.1 Example 1: Inserting Valid Records
 
 ```sql
 INSERT INTO `student` (`name`, `major`, `religion`) VALUES ("Maisie Moran", "Maths", "Buddhism");
@@ -70,7 +70,7 @@ Expected output:
 +------------+--------------+---------+--------------+
 ```
 
-#### Example 2: Insertion with Specified Religion
+### 2.2 Example 2: Insertion with Specified Religion
 
 ```sql
 INSERT INTO `student` (`name`, `major`, `religion`) VALUES ("Claire Kelle", "Biology", "Christianity");
@@ -98,7 +98,7 @@ Expected output:
 +------------+--------------+-----------+--------------+
 ```
 
-#### Example 3: Valid Insertion with Auto-Increment
+### 2.3 Example 3: Valid Insertion with Auto-Increment
 
 ```sql
 INSERT INTO `student` (`student_no`, `name`, `major`) VALUES (123, "Alice Johnson", "Maths");
@@ -128,7 +128,7 @@ Expected output:
 +------------+---------------+-----------+--------------+
 ```
 
-#### Example 4: Handling Duplicate Names
+### 2.4 Example 4: Handling Duplicate Names
 
 ```sql
 INSERT INTO `student` (`name`, `major`) VALUES ("Liam Smith", "Maths");
@@ -140,7 +140,7 @@ INSERT INTO `student` (`name`, `major`) VALUES ("Liam Smith", "Maths");
   ```
 - **Explanation**: The attempt to insert a record with the name "Liam Smith" fails because it already exists, violating the UNIQUE constraint.
 
-#### Example 5: Insertion with NULL Name
+### 2.5 Example 5: Insertion with NULL Name
 
 ```sql
 INSERT INTO `student` (`name`, `major`) VALUES ("Ella Oconnell", NULL);
@@ -152,11 +152,16 @@ INSERT INTO `student` (`name`, `major`) VALUES ("Ella Oconnell", NULL);
   ```
 - **Explanation**: The insertion fails because the `major` field cannot be NULL, as enforced by the NOT NULL constraint.
 
-### Conclusion
+## 3. Conclusion
 
 In this tutorial, you learned about SQL constraints and their importance in maintaining data integrity within your database. We covered the essential concepts, including:
 
 - **Constraints Overview**: You understood what constraints are and how they enforce rules on data entries.
+
 - **Creating Tables**: You learned how to create a `student` table with various constraints such as `NOT NULL`, `UNIQUE`, and `DEFAULT`.
+
+
 - **Inserting Records**: You practiced inserting records while respecting constraints and observed outcomes for valid and invalid entries.
 - **Error Handling**: You recognized how to handle errors related to constraints, ensuring data validity.
+
+The next session will be **UPDATE** data that has been inserted into the table.

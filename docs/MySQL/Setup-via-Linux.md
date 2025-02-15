@@ -14,7 +14,7 @@ sudo apt install mysql-server
 
 ## 2. Managing MySQL Server Status
 
-### Check Status
+### 2.1 Check Status
 
 To check the status of the MySQL server, use:
 
@@ -22,7 +22,7 @@ To check the status of the MySQL server, use:
 sudo systemctl status mysql
 ```
 
-### Enable MySQL Server
+### 2.2 Enable MySQL Server
 
 If the MySQL server is not enabled, run:
 
@@ -30,7 +30,7 @@ If the MySQL server is not enabled, run:
 sudo systemctl enable mysql
 ```
 
-### Disable MySQL Server
+### 2.3 Disable MySQL Server
 
 To disable the MySQL server, run:
 
@@ -38,7 +38,7 @@ To disable the MySQL server, run:
 sudo systemctl disable mysql
 ```
 
-### Start MySQL Server
+### 2.4 Start MySQL Server
 
 To start the MySQL server, use:
 
@@ -46,7 +46,7 @@ To start the MySQL server, use:
 sudo systemctl start mysql
 ```
 
-### Stop MySQL Server
+### 2.5 Stop MySQL Server
 
 To stop the MySQL server, run:
 
@@ -125,7 +125,7 @@ If you forget your password, follow these steps:
    sudo service mysql restart
    ```
 
-### Handling Errors
+### 6.1 Handling Errors
 
 If you encounter the error:
 
@@ -160,7 +160,7 @@ To access your MySQL server via a web interface, install phpMyAdmin:
 sudo apt install phpmyadmin php
 ```
 
-### Find Your IP Address
+### 7.1 Find Your IP Address
 
 Check your IP address with:
 
@@ -174,7 +174,7 @@ Get the IP address of `eth0`, for example, `172.10.10.11`. Open your browser and
 http://172.10.10.11/phpmyadmin/
 ```
 
-### Handling "NOT FOUND" Error
+### 7.2 Handling "NOT FOUND" Error
 
 If you encounter a "NOT FOUND" error, follow these steps:
 
@@ -195,14 +195,18 @@ If you encounter a "NOT FOUND" error, follow these steps:
 
 After these steps, try accessing the URL again, and you should be able to log in to the phpMyAdmin server with your password.
 
-## Conclusion
+## 8. Conclusion
 
 In this tutorial, you learned how to install and manage MySQL Server on a Linux system. We covered the essential steps, including:
 
 - **Installation**: You successfully installed MySQL Server using the package manager.
+
 - **Service Management**: You learned how to check the server status, enable, disable, start, and stop the MySQL service.
+
 - **Security**: You enhanced the security of your MySQL installation with the `mysql_secure_installation` command and learned how to set and recover passwords.
+
 - **Accessing MySQL**: You accessed the MySQL server and set up root user authentication.
+
 - **Web Interface**: You installed phpMyAdmin for a user-friendly web interface to manage your MySQL databases.
 
 Our next session will start to indroduce some basic concept for Tables and Keys in MySQL.

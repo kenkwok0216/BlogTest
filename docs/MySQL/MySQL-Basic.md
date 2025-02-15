@@ -8,7 +8,7 @@ sidebar_position: 2
 
 In MySQL, a table is a collection of related data entries organized in rows and columns. Each table has a unique name and consists of various data types.
 
-### Example
+### 1.1 Example
 
 The following is an `employees` table:
 
@@ -53,12 +53,16 @@ A unique key constraint ensures that all values in a column are different from o
 Indexes are used to speed up the retrieval of rows by creating a data structure that allows fast access to rows. You can create an index on a specific column to improve query performance.
 For example, if you frequently query the `employees` table by the `position` column, you can create an index on that column to improve query performance. With the index on the `position` column, queries will directly search `position` but not `id` then `name` then `position` and end the searching.
 
-## Conclusion
+## 4. Conclusion
 
 - **Tables**: Organize data in rows and columns.
+
 - **Primary Key**: Unique identifier for records.
+
 - **Foreign Key**: Links two tables together.
+
 - **Unique Key**: Ensures all values in a column are unique.
+
 - **Indexes**: Improve the speed of data retrieval.
 
 The next session will start to introduce the MySQL to generate the above tables
