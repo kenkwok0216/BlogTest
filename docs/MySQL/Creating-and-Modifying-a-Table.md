@@ -90,7 +90,7 @@ You should see the following output:
 
 ## 5. Modifying the Table Structure
 
-### 5.1 Adding a New Column: `score`
+### 5.1 Adding a New Column
 
 To add a new column named `score`, use the following command:
 
@@ -106,7 +106,7 @@ Check the updated structure using:
 DESCRIBE `student`;
 ```
 
-### 5.2 Expected Output After Adding `score`
+The expected output after adding `score` is as follow:
 
 ```
 +------------+-------------+------+-----+---------+-------+
@@ -119,7 +119,7 @@ DESCRIBE `student`;
 +------------+-------------+------+-----+---------+-------+
 ```
 
-### 5.3 Changing the Data Type of `score`
+### 5.2 Changing the Data Type
 
 To change the data type of the `score` column to `DECIMAL(3,2)`, use the following command:
 
@@ -127,7 +127,7 @@ To change the data type of the `score` column to `DECIMAL(3,2)`, use the followi
 ALTER TABLE `student` MODIFY `score` DECIMAL(3,2);
 ```
 
-#### 5.3.1 Verify Table Structure After Changing Data Type
+#### 5.2.1 Verify Table Structure After Changing Data Type
 
 Use the command:
 
@@ -135,7 +135,7 @@ Use the command:
 DESCRIBE `student`;
 ```
 
-### 5.4 Expected Output After Changing Data Type
+The expected output after dropping `score` is as follow:
 
 ```
 +------------+-------------+------+-----+---------+-------+
@@ -148,7 +148,7 @@ DESCRIBE `student`;
 +------------+-------------+------+-----+---------+-------+
 ```
 
-### 5.5 Dropping the `score` Column
+### 5.3 Dropping the Column
 
 To remove the `score` column, use the following command:
 
@@ -156,7 +156,7 @@ To remove the `score` column, use the following command:
 ALTER TABLE `student` DROP `score`;
 ```
 
-#### 5.5.1 Verify Table Structure After Dropping Column
+#### 5.3.1 Verify Table Structure After Dropping Column
 
 Check the updated structure using:
 
@@ -164,7 +164,7 @@ Check the updated structure using:
 DESCRIBE `student`;
 ```
 
-### 5.6 Expected Output After Dropping `score`
+The expected output after dropping `score` is as follow:
 
 ```
 +------------+-------------+------+-----+---------+-------+
@@ -175,6 +175,35 @@ DESCRIBE `student`;
 | major      | varchar(25) | YES  |     | NULL    |       |
 +------------+-------------+------+-----+---------+-------+
 ```
+
+### 5.4 Changing Field Name
+
+To change to field Name from `major` to `field_of_study`, we can use the following command:
+
+```sql
+ALTER TABLE `student` CHANGE `major` `field_of_study` VARCHAR(100);
+```
+
+#### 5.4.1 Verify Table Structure After Changing Field Name
+
+Check the updated structure using:
+
+```sql
+DESCRIBE `student`;
+```
+
+The expected output after chaning field name is as follow:
+
+```
++----------------+--------------+------+-----+---------+-------+
+| Field          | Type         | Null | Key | Default | Extra |
++----------------+--------------+------+-----+---------+-------+
+| student_no     | int          | NO   | PRI | NULL    |       |
+| name           | varchar(50)  | YES  |     | NULL    |       |
+| field_of_study | varchar(100) | YES  |     | NULL    |       |
++----------------+--------------+------+-----+---------+-------+
+```
+
 
 ## 6. Dropping the Table
 

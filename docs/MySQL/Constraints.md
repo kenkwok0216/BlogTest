@@ -128,7 +128,10 @@ Expected output:
 +------------+---------------+-----------+--------------+
 ```
 
-### 2.4 Example 4: Handling Duplicate Names
+
+## 3. Error Handling
+
+### 3.1 Inerting Duplicate Value into `UNIQUE` field
 
 ```sql
 INSERT INTO `student` (`name`, `major`) VALUES ("Liam Smith", "Maths");
@@ -140,7 +143,7 @@ INSERT INTO `student` (`name`, `major`) VALUES ("Liam Smith", "Maths");
   ```
 - **Explanation**: The attempt to insert a record with the name "Liam Smith" fails because it already exists, violating the UNIQUE constraint.
 
-### 2.5 Example 5: Insertion with NULL Name
+### 3.2 Inserting NULL into `NOT NULL` field
 
 ```sql
 INSERT INTO `student` (`name`, `major`) VALUES ("Ella Oconnell", NULL);
@@ -160,8 +163,8 @@ In this tutorial, you learned about SQL constraints and their importance in main
 
 - **Creating Tables**: You learned how to create a `student` table with various constraints such as `NOT NULL`, `UNIQUE`, and `DEFAULT`.
 
-
 - **Inserting Records**: You practiced inserting records while respecting constraints and observed outcomes for valid and invalid entries.
+
 - **Error Handling**: You recognized how to handle errors related to constraints, ensuring data validity.
 
-The next session will be **UPDATE** data that has been inserted into the table.
+The next session will be `UPDATE` data that has been inserted into the table.

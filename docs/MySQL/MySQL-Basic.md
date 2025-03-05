@@ -12,20 +12,20 @@ In MySQL, a table is a collection of related data entries organized in rows and 
 
 The following is an `employees` table:
 
-| **id** | **name**       | **position**   | **hire_date** | **email**                |
-|--------|----------------|----------------|----------------|--------------------------|
-| 1      | Alice Johnson   | Software Engineer | 2022-01-15     | alice.johnson@example.com |
-| 2      | Bob Smith       | Project Manager   | 2021-06-10     | bob.smith@example.com     |
-| 3      | Carol Williams   | Data Analyst      | 2023-03-25     | carol.williams@example.com |
-| 4      | David Brown     | UX Designer       | 2020-11-08     | david.brown@example.com    |
+| **id** | **name**       | **position**      | **hire_date**  | **email**                  |
+|--------|----------------|-------------------|----------------|----------------------------|
+| 1      | Alice Johnson  | Software Engineer | 2022-01-15     | alice.johnson@example.com  |
+| 2      | Bob Smith      | Project Manager   | 2021-06-10     | bob.smith@example.com      |
+| 3      | Carol Williams | Data Analyst      | 2023-03-25     | carol.williams@example.com |
+| 4      | David Brown    | UX Designer       | 2020-11-08     | david.brown@example.com    |
 
 The following is a `sessions` table:
 
-| **session_id** | **employee_id** | **session_date** | **topic**          |
-|-----------------|------------------|------------------|---------------------|
-| 1               | 1                | 2023-01-20       | Agile Methodologies  |
-| 2               | 2                | 2023-02-15       | Project Management    |
-| 3               | 3                | 2023-03-10       | Data Analysis         |
+| **session_id**  | **employee_id**  | **session_date** | **topic**              |
+|-----------------|------------------|------------------|------------------------|
+| 1               | 1                | 2023-01-20       | Agile Methodologies    |
+| 2               | 2                | 2023-02-15       | Project Management     |
+| 3               | 3                | 2023-03-10       | Data Analysis          |
 | 4               | 4                | 2023-04-05       | User Experience Design |
 
 

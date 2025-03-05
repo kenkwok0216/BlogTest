@@ -2,9 +2,9 @@
 sidebar_position: 7
 ---
 
-# Updating and Deleting Data
+# Updating Data
 
-In this session, we will explore how to **UPDATE** data that has been inserted into the table.
+In this session, we will explore how to `UPDATE` data that has been inserted into the table.
 
 ## 1. Prerequisites
 
@@ -45,7 +45,7 @@ SET SQL_SAFE_UPDATES = 0;
 
 ## 2. Update Data Examples
 
-### 2.1 Exmaple 1: Updating Major from Maths to Mathematics
+### 2.1 Exmaple 1: Updating (Non-Unique) Data
 
 Run the following command:
 
@@ -56,8 +56,8 @@ UPDATE `student` SET `major` = 'Mathematics' WHERE `major` = 'Maths';
 #### 2.1.1 Explanation
 
 - **UPDATE `student`**: Specifies the table to update.
-- **SET `major` = 'Mathematics'**: Changes the `major` column to **Mathematics**.
-- **WHERE `major` = 'Maths'**: Filters to update only rows where `major` is **Maths**.
+- **SET `major` = 'Mathematics'**: Changes the `major` column to `Mathematics`.
+- **WHERE `major` = 'Maths'**: Filters to update only rows where `major` is `Maths`.
 
 #### 2.1.2 Verification
 
@@ -83,9 +83,9 @@ This will show you the updated data in the `student` table, as follows:
 ```
 
 **Changes made:**
-- The major for **student_no** 1 and **student_no** 123 has changed from **Maths** to **Mathematics**.
+- The major for `student_no` **1** and `student_no` **123** has changed from `Maths` to `Mathematics`.
 
-### 2.2 Example 2: Changing Religion for a Specific Student
+### 2.2 Example 2: Updating Unique Data
 
 Run the command:
 
@@ -96,8 +96,8 @@ UPDATE `student` SET `religion` = 'Buddhism' WHERE `student_no` = 124;
 #### 2.2.1 Explanation
 
 - **UPDATE `student`**: Specifies the table to update.
-- **SET `religion` = 'Buddhism'**: Changes the `religion` column to **Buddhism**.
-- **WHERE `student_no` = 124**: Ensures that only the row with **student_no** 124 is updated.
+- **SET `religion` = 'Buddhism'**: Changes the `religion` column to `Buddhism`.
+- **WHERE `student_no` = 124**: Ensures that only the row with `student_no` **124** is updated.
 
 #### 2.2.2 Verification
 
@@ -123,9 +123,9 @@ This will show you the updated data in the `student` table, as follows:
 ```
 
 **Changes made:**
-- The religion for **student_no** 124 has changed from **No religion** to **Buddhism**.
+- The religion for `student_no` **124** has changed from `No religion` to `Buddhism`.
 
-### 2.3 Example 3: Combining Majors into Biochemistry
+### 2.3 Example 3: Updating Data Based on Multiple Conditions using ``OR``
 
 Run the command:
 
@@ -136,8 +136,8 @@ UPDATE `student` SET `major` = 'Biochemistry' WHERE `major` = 'Biology' OR `majo
 #### 2.3.1 Explanation
 
 - **UPDATE `student`**: Specifies the table to update.
-- **SET `major` = 'Biochemistry'**: Changes the `major` column to **Biochemistry**.
-- **WHERE `major` = 'Biology' OR `major` = 'Chemistry'**: Updates rows with either **Biology** or **Chemistry**.
+- **SET `major` = 'Biochemistry'**: Changes the `major` column to `Biochemistry`.
+- **WHERE `major` = 'Biology' OR `major` = 'Chemistry'**: Updates rows with either `Biology` or `Chemistry`.
 
 #### 2.3.2 Verification
 
@@ -163,8 +163,8 @@ This will show you the updated data in the `student` table, as follows:
 ```
 
 **Changes made:**
-- The major for **student_no** 3 has changed from **Biology** to **Biochemistry**.
-- The major for **student_no** 4 has changed from **Chemistry** to **Biochemistry**.
+- The major for `student_no` **3** has changed from `Biology` to `Biochemistry`.
+- The major for `student_no` **4** has changed from `Chemistry` to `Biochemistry`.
 
 ### 2.4 Example 4: Updating Multiple Columns
 
@@ -178,7 +178,7 @@ UPDATE `student` SET `major` = 'Computer Science', `religion` = 'No religion' WH
 
 - **UPDATE `student`**: Specifies the table for the update.
 - **SET `major` = 'Computer Science', `religion` = 'No religion'**: Updates both columns for the specified student.
-- **WHERE `student_no` = 2**: Ensures that only the row for student number 2 is updated.
+- **WHERE `student_no` = 2**: Ensures that only the row for student number **2** is updated.
 
 #### 2.4.2 Verification
 
@@ -204,10 +204,10 @@ This will show you the updated data in the `student` table, as follows:
 ```
 
 **Changes made:**
-- The major for **student_no** 2 has changed from **Physics** to **Computer Science**.
-- The religion for **student_no** 2 has changed from **Christianity** to **No religion**.
+- The major for `student_no` **2** has changed from `Physics` to `Computer Science`.
+- The religion for `student_no` **2** has changed from `Christianity` to `No religion`.
 
-### 2.5 Example 5: Changing a Specific Name
+### 2.5 Example 5: Updating Data Based on Multiple Conditions using ``AND``
 
 Run the command:
 
@@ -245,9 +245,9 @@ This will show you the updated data in the `student` table, as follows:
 ```
 
 **Changes made:**
-- The name for **student_no** 3 has changed from **Claire Kelle** to **Abbie Mccall**.
+- The name for `student_no` 3 has changed from `Claire Kelle` to `Abbie Mccall`.
 
-### 2.6 Example 6: Applying a Change to All Rows
+### 2.6 Example 6: Updating Data without Condition
 
 Run the command:
 
@@ -258,7 +258,7 @@ UPDATE `student` SET `religion` = 'No religion';
 #### 2.6.1 Explanation
 
 - **UPDATE `student`**: Indicates we are updating the `student` table.
-- **SET `religion` = 'No religion'**: This command will set the `religion` column to **No religion** for all records.
+- **SET `religion` = 'No religion'**: This command will set the `religion` column to `No religion` for all records.
 
 #### 2.6.2 Verification
 
@@ -284,7 +284,7 @@ This will show you the updated data in the `student` table, as follows:
 ```
 
 **Changes made:**
-- The religion for all students has changed to **No religion**.
+- The religion for all students has changed to `No religion`.
 
 ## 3. Conclusion
 
