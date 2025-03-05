@@ -8,7 +8,7 @@ In this session, we will try to delete data in the database using `DELETE`. The 
 
 ## 1. Prerequisites
 
-Before we begin, please ensure that you have created a database called `sql_tutorial` and have followed the steps in the previous session on [**Constraints**](/docs/MySQL/Update_Data).
+Before we begin, please ensure that you have created a database called `sql_tutorial` and have followed the steps in the previous session on [**Constraints**](/docs/MySQL/Updating-Data).
 
 ### 1.1 Checking Your Data
 
