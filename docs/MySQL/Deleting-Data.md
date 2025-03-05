@@ -145,9 +145,9 @@ This will show you the updated data in the `student` table, as follows:
 ```
 
 **Changes made:**
-- The student with the name **Abbie Mccall** has been deleted, as it contains "ie".
+- The student with the name **Abbie Mccall** has been deleted, as it contains `ie`.
 
-## Conclusion
+## 3. Conclusion
 
 In this section, we explored how to effectively delete data from the `student` table using SQL commands. We covered various scenarios for deleting records, including targeting specific entries, deleting in ranges, and removing records based on character patterns.
 
@@ -156,3 +156,5 @@ Key takeaways include:
 - **Data Deletion**: The `DELETE` statement is crucial for removing records from a table, with the ability to specify conditions for targeted deletions.
 
 - **Caution**: Be careful with the `WHERE` clause, omitting it will result in all records being deleted from the table.
+
+After talking about `DELETE`, then we will taking about `SELECT` in the next session.

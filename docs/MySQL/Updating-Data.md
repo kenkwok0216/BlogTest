@@ -294,4 +294,4 @@ Key takeaways include:
 
 - **Data Updating**: The `UPDATE` statement is essential for modifying existing records in a table, allowing for precise control over which columns to change and under which conditions.
 
-After talking about `UPDATE`, then we will taking bout `DELETE` in the next session.
+After talking about `UPDATE`, then we will taking about `DELETE` in the next session.
