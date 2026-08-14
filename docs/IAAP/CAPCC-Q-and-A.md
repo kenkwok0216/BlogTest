@@ -189,7 +189,7 @@ D. Legal Exemption Protocol
 ### Question 8
 * **正確答案**：**B (Operable)**
 * **解析**：**Operable（可操作）** 要求使用者必須有足夠的時間閱讀與使用內容（Enough Time）。強制 2 分鐘倒數且不提供延長或關閉計時器的功能，違反了 WCAG 2.2.1 Timing Adjustable 條款，屬於 Operable 原則。
-* **考點說明**：POUR 原則判斷——可看/可聽 $\rightarrow$ Perceptible；鍵盤/時間/控制/不引起癲癇 $\rightarrow$ Operable；易讀/可預測/表單錯誤提示 $\rightarrow$ Understandable；跨平台/AT可解析 $\rightarrow$ Robust。
+* **考點說明**：POUR 原則判斷——可看/可聽 ➔ Perceptible；鍵盤/時間/控制/不引起癲癇 ➔ Operable；易讀/可預測/表單錯誤提示 ➔ Understandable；跨平台/AT可解析 ➔ Robust。
 
 ---
 
@@ -203,6 +203,6 @@ D. Legal Exemption Protocol
 ### Question 10
 * **正確答案**：**B (Accessibility Capability Maturity Model (ACMM) Progression)**
 * **解析**：組織將無障礙從臨時被動（Ad-hoc/Reactive）提升至有計畫、已整合與可管理（Managed），屬於**組織能力成熟度模型（Capability Maturity Model）** 的推動過程。
-* **考點說明**：Domain 3 組織管理策略考點，涵蓋成熟度階梯（Ad-hoc $\rightarrow$ Repeatable $\rightarrow$ Integrated $\rightarrow$ Managed $\rightarrow$ Optimizing）。
+* **考點說明**：Domain 3 組織管理策略考點，涵蓋成熟度階梯（Ad-hoc ➔ Repeatable ➔ Integrated ➔ Managed ➔ Optimizing）。
 
 ---
