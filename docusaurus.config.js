@@ -20,7 +20,12 @@ const config = {
   projectName: 'BlogTest', // Your repository name
   deploymentBranch: "gh-pages", // Deployment branch for GitHub Pages
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: 'warn',
+    },
+  },
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
@@ -96,6 +101,13 @@ const config = {
             position: 'left',
             label: 'IAAP',
 			      to: '/docs/IAAP/CPACC',
+          },
+          {
+            //type: 'docSidebar',
+            sidebarId: 'CsharpSidebar',
+            position: 'left',
+            label: 'Csharp',
+			      to: '/docs/C-Sharp/intro',
           },
         ],
       },
